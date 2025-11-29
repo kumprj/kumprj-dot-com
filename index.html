@@ -111,18 +111,29 @@
             font-size: 1.2rem;
         }
 
+        /* Buttons - no pointer cursor */
+        button,
+        input[type="button"],
+        input[type="submit"],
+        .btn,
+        .button {
+            cursor: default;
+        }
+
+        /* Links - keep pointer cursor */
         .link-url a {
-            color: #4ecdc4;
-            /* Lighter blue instead of dark #007bff */
+            color: #4dabf7;
             text-decoration: none;
             word-break: break-all;
+            cursor: pointer;
+            /* Explicit pointer for links */
         }
 
         .link-url a:hover {
             text-decoration: underline;
             color: #339af0;
-            /* Even lighter on hover */
         }
+
 
 
         .link-desc {
