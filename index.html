@@ -111,14 +111,19 @@
             font-size: 1.2rem;
         }
 
-        .link-url {
-            color: #60a5fa;
-            font-family: 'Monaco', 'Menlo', monospace;
-            font-size: 0.95rem;
-            margin-bottom: 0.8rem;
+        .link-url a {
+            color: #4dabf7;
+            /* Lighter blue instead of dark #007bff */
+            text-decoration: none;
             word-break: break-all;
-            opacity: 0.9;
         }
+
+        .link-url a:hover {
+            text-decoration: underline;
+            color: #339af0;
+            /* Even lighter on hover */
+        }
+
 
         .link-desc {
             color: #cbd5e1;
