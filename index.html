@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,6 +11,7 @@
             padding: 0;
             box-sizing: border-box;
         }
+
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             line-height: 1.6;
@@ -18,15 +20,17 @@
             min-height: 100vh;
             padding: 2rem;
         }
+
         .container {
             max-width: 800px;
             margin: 0 auto;
             background: rgba(15, 23, 42, 0.95);
             border-radius: 20px;
-            box-shadow: 0 25px 50px rgba(0,0,0,0.5);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
             border: 1px solid rgba(59, 130, 246, 0.2);
             overflow: hidden;
         }
+
         header {
             background: linear-gradient(135deg, #1e40af 0%, #3b82f6 50%, #1d4ed8 100%);
             color: #e2e8f0;
@@ -34,6 +38,7 @@
             padding: 3rem 2rem;
             position: relative;
         }
+
         header::before {
             content: '';
             position: absolute;
@@ -44,22 +49,27 @@
             background: linear-gradient(135deg, rgba(30, 64, 175, 0.3) 0%, rgba(59, 130, 246, 0.2) 100%);
             z-index: 1;
         }
-        header > * {
+
+        header>* {
             position: relative;
             z-index: 2;
         }
+
         h1 {
             font-size: 2.5rem;
             margin-bottom: 0.5rem;
-            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
         }
+
         .subtitle {
             font-size: 1.2rem;
             opacity: 0.9;
         }
+
         .links-section {
             padding: 3rem 2rem;
         }
+
         h2 {
             color: #f1f5f9;
             margin-bottom: 1.5rem;
@@ -67,6 +77,7 @@
             border-bottom: 2px solid rgba(59, 130, 246, 0.3);
             padding-bottom: 0.5rem;
         }
+
         .link-item {
             background: rgba(30, 41, 59, 0.8);
             border: 1px solid rgba(71, 85, 105, 0.5);
@@ -77,12 +88,14 @@
             cursor: pointer;
             backdrop-filter: blur(10px);
         }
+
         .link-item:hover {
             transform: translateY(-5px);
             box-shadow: 0 20px 40px rgba(59, 130, 246, 0.2);
             border-color: rgba(59, 130, 246, 0.6);
             background: rgba(30, 41, 59, 0.95);
         }
+
         .link-title {
             font-size: 1.3rem;
             font-weight: 600;
@@ -91,11 +104,13 @@
             display: flex;
             align-items: center;
         }
+
         .link-title::before {
             content: "🔗";
             margin-right: 0.5rem;
             font-size: 1.2rem;
         }
+
         .link-url {
             color: #60a5fa;
             font-family: 'Monaco', 'Menlo', monospace;
@@ -104,46 +119,70 @@
             word-break: break-all;
             opacity: 0.9;
         }
+
         .link-desc {
             color: #cbd5e1;
             font-size: 1rem;
         }
+
         @media (max-width: 768px) {
-            body { padding: 1rem; }
-            h1 { font-size: 2rem; }
-            .links-section { padding: 2rem 1.5rem; }
+            body {
+                padding: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .links-section {
+                padding: 2rem 1.5rem;
+            }
         }
     </style>
 </head>
+
 <body>
     <div class="container">
         <header>
             <h1>Robert Kump - Personal Projects</h1>
             <p class="subtitle">Links to various projects and their corresponding codebases.</p>
         </header>
-        
+
         <section class="links-section">
             <h2>Featured Links</h2>
-            
+
             <div class="link-item">
                 <div class="link-title">Play The Game of Things</div>
-                <div class="link-url">https://gameofthings.fun</div>
-                <div class="link-desc">Guess who said what in this fun, silly, and easy game with friends. Everyone plays on their own device.</div>
+                <div class="link-url">
+                    <a href="https://gameofthings.fun" target="_blank"
+                        rel="noopener noreferrer">https://gameofthings.fun</a>
+                </div>
+                <div class="link-desc">Guess who said what in this fun, silly, and easy game with friends. Everyone
+                    plays on their own device.</div>
             </div>
-            
+
             <div class="link-item">
                 <div class="link-title">Fair Priced Tickets</div>
-                <div class="link-url">http://fairpricedtickets.com/</div>
-                <div class="link-desc">Ticket resale website POC that doesn't allow price gouging. Receipts of tickets are parsed to prevent overcharging.</div>
+                <div class="link-url">
+                    <a href="http://fairpricedtickets.com/" target="_blank"
+                        rel="noopener noreferrer">http://fairpricedtickets.com/</a>
+                </div>
+                <div class="link-desc">Ticket resale website POC that doesn't allow price gouging. Receipts of tickets
+                    are parsed to prevent overcharging.</div>
             </div>
-            
+
             <div class="link-item">
                 <div class="link-title">Free Things From My Team</div>
-                <div class="link-url">https://freethingsfrommyteam.com/</div>
-                <div class="link-desc">Text message alerts when the Chicago Blackhawks or Chicago Cubs get locals free Chick-fil-a.</div>
+                <div class="link-url">
+                    <a href="https://freethingsfrommyteam.com/" target="_blank"
+                        rel="noopener noreferrer">https://freethingsfrommyteam.com/</a>
+                </div>
+                <div class="link-desc">Text message alerts when the Chicago Blackhawks or Chicago Cubs get locals free
+                    Chick-fil-a.</div>
             </div>
-            
+
         </section>
     </div>
 </body>
+
 </html>
