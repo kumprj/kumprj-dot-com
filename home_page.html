@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game of Things - Home</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 2rem;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        header {
+            background: linear-gradient(135deg, #ff6b6b, #feca57);
+            color: white;
+            text-align: center;
+            padding: 3rem 2rem;
+        }
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        .links-section {
+            padding: 3rem 2rem;
+        }
+        h2 {
+            color: #444;
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+        }
+        .link-item {
+            background: white;
+            border: 2px solid #e1e5e9;
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        .link-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+            border-color: #667eea;
+        }
+        .link-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+        }
+        .link-title::before {
+            content: "🔗";
+            margin-right: 0.5rem;
+            font-size: 1.2rem;
+        }
+        .link-url {
+            color: #667eea;
+            font-family: monospace;
+            font-size: 0.95rem;
+            margin-bottom: 0.8rem;
+            word-break: break-all;
+        }
+        .link-desc {
+            color: #666;
+            font-size: 1rem;
+        }
+        @media (max-width: 768px) {
+            body { padding: 1rem; }
+            h1 { font-size: 2rem; }
+            .links-section { padding: 2rem 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Game of Things</h1>
+            <p class="subtitle">Your hub for creative web experiences and resources</p>
+        </header>
+        
+        <section class="links-section">
+            <h2>Featured Links</h2>
+            
+            <div class="link-item">
+                <div class="link-title">Play Game of Things</div>
+                <div class="link-url">https://gameofthings.yourdomain.com</div>
+                <div class="link-desc">Create hilarious games with friends - submit anonymous entries and guess who wrote what. Built with React, AWS Amplify, and DynamoDB for real-time multiplayer fun.</div>
+            </div>
+            
+            <div class="link-item">
+                <div class="link-title">AWS Amplify Docs</div>
+                <div class="link-url">https://docs.amplify.aws</div>
+                <div class="link-desc">Official documentation for AWS Amplify - perfect for deploying React apps with authentication, APIs, and serverless backends like your Game of Things project.</div>
+            </div>
+            
+            <div class="link-item">
+                <div class="link-title">DynamoDB Developer Guide</div>
+                <div class="link-url">https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/</div>
+                <div class="link-desc">Comprehensive guide for working with DynamoDB including partition/sort key patterns (gameId/entryId) and TypeScript SDK v3 integration for your game data storage.</div>
+            </div>
+            
+            <div class="link-item">
+                <div class="link-title">React TypeScript Patterns</div>
+                <div class="link-url">https://react-typescript-cheatsheet.netlify.app</div>
+                <div class="link-desc">Best practices and patterns for TypeScript + React development, including hooks, components, and AWS integration for apps like your multiplayer game.</div>
+            </div>
+            
+            <div class="link-item">
+                <div class="link-title">Serverless Land</div>
+                <div class="link-url">https://serverlessland.com</div>
+                <div class="link-desc">Curated AWS serverless patterns, templates, and examples including Lambda@Edge, API Gateway, and Amplify deployments for full-stack web apps.</div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
