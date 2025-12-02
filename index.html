@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Robbie Kump - Projects Home</title>
+    <title>Robbie Kump</title>
     <style>
         * {
             margin: 0;
@@ -154,15 +154,41 @@
                 padding: 2rem 1.5rem;
             }
         }
+
+        .header-row {
+            display: flex;
+            align-items: center;
+            /* vertically center image and text */
+            gap: 12px;
+            /* space between image and header */
+        }
+
+        /* Make the picture small */
+        .profile-photo {
+            width: 192px;
+            /* adjust smaller or larger */
+            height: 192px;
+            border-radius: 50%;
+            /* circle */
+            object-fit: cover;
+            /* crop nicely */
+        }
     </style>
 </head>
 
 <body>
     <div class="container">
-        <header>
-            <h1>Robert Kump</h1>
-            <p class="subtitle">Links to various projects and their corresponding codebases.</p>
-        </header>
+        <div class="header-row">
+            <header>
+                <img src="pizza.jpeg" alt="Robert Kump" class="profile-photo">
+                <h1>Robert Kump</h1>
+                <p class="subtitle">Software Engineer from Chicago, IL. Links below to various projects and their
+                    corresponding codebases. When I'm not working or building a fun project, you can catch me playing
+                    beach volleyball, skiing, and playing League of Legends.</p>
+            </header>
+        </div>
+
+
 
         <section class="links-section">
             <h2>Featured Projects</h2>
