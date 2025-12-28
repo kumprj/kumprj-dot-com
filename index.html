@@ -50,7 +50,7 @@
             z-index: 1;
         }
 
-        header>* {
+        header > * {
             position: relative;
             z-index: 2;
         }
@@ -135,7 +135,6 @@
         }
 
 
-
         .link-desc {
             color: #cbd5e1;
             font-size: 1rem;
@@ -177,54 +176,66 @@
 </head>
 
 <body>
-    <div class="container">
-        <div class="header-row">
-            <header>
-                <img src="pizza.jpeg" alt="Robert Kump" class="profile-photo">
-                <h1>Robert Kump</h1>
-                <p class="subtitle">Software Engineer from Chicago, IL. Links below to various projects and their
-                    corresponding codebases. When I'm not working or building a fun project, you can catch me playing
-                    beach volleyball, skiing, or playing League of Legends.</p>
-            </header>
+<div class="container">
+    <div class="header-row">
+        <header>
+            <img src="pizza.jpeg" alt="Robert Kump" class="profile-photo">
+            <h1>Robert Kump</h1>
+            <p class="subtitle">Software Engineer from Chicago, IL. Links below to various projects
+                and their
+                corresponding codebases. When I'm not working or building a fun project, you can
+                catch me playing
+                beach volleyball, skiing, or playing League of Legends.</p>
+        </header>
+    </div>
+
+
+    <section class="links-section">
+        <h2>Featured Projects</h2>
+
+        <div class="link-item" style="cursor: default;">
+            <div class="link-title">Play The Game of Things</div>
+            <div class="link-url">
+                <a href="https://gameofthings.fun" target="_blank"
+                   rel="noopener noreferrer">https://gameofthings.fun</a>
+            </div>
+            <div class="link-desc">Guess who said what in this fun, silly, and easy game with
+                friends. Everyone
+                plays on their own device.
+                <span class="link-url">
+                    <a href="https://github.com/kumprj/game-of-thingies" target="_blank" rel="noopener noreferrer">View the source code here.</a>
+                </span>
+            </div>
         </div>
 
+        <div class="link-item" style="cursor: default;">
+            <div class="link-title">Fair Priced Tickets</div>
+            <div class="link-url">
+                <a href="http://fairpricedtickets.com/" target="_blank"
+                   rel="noopener noreferrer">http://fairpricedtickets.com/</a>
+            </div>
+            <div class="link-desc">Ticket resale website POC that doesn't allow price gouging.
+                Receipts of tickets are parsed to prevent overcharging.
+            </div>
+        </div>
 
-
-        <section class="links-section">
-            <h2>Featured Projects</h2>
-
-            <div class="link-item" style="cursor: default;">
-                <div class="link-title">Play The Game of Things</div>
-                <div class="link-url">
-                    <a href="https://gameofthings.fun" target="_blank"
-                        rel="noopener noreferrer">https://gameofthings.fun</a>
-                </div>
-                <div class="link-desc">Guess who said what in this fun, silly, and easy game with friends. Everyone
-                    plays on their own device.</div>
+        <div class="link-item" style="cursor: default;">
+            <div class="link-title">Free Things From My Team</div>
+            <div class="link-url">
+                <a href="https://freethingsfrommyteam.com/" target="_blank"
+                   rel="noopener noreferrer">https://freethingsfrommyteam.com/</a>
+            </div>
+            <div class="link-desc">Text message alerts when the Chicago Blackhawks or Chicago Cubs
+                get locals free Chick-fil-a.
+                <span class="link-url">
+                    <a href="https://github.com/kumprj/chicago-cfa" target="_blank" rel="noopener noreferrer">View the source code here.</a>
+                </span>
             </div>
 
-            <div class="link-item" style="cursor: default;">
-                <div class="link-title">Fair Priced Tickets</div>
-                <div class="link-url">
-                    <a href="http://fairpricedtickets.com/" target="_blank"
-                        rel="noopener noreferrer">http://fairpricedtickets.com/</a>
-                </div>
-                <div class="link-desc">Ticket resale website POC that doesn't allow price gouging. Receipts of tickets
-                    are parsed to prevent overcharging.</div>
-            </div>
+        </div>
 
-            <div class="link-item" style="cursor: default;">
-                <div class="link-title">Free Things From My Team</div>
-                <div class="link-url">
-                    <a href="https://freethingsfrommyteam.com/" target="_blank"
-                        rel="noopener noreferrer">https://freethingsfrommyteam.com/</a>
-                </div>
-                <div class="link-desc">Text message alerts when the Chicago Blackhawks or Chicago Cubs get locals free
-                    Chick-fil-a.</div>
-            </div>
-
-        </section>
-    </div>
+    </section>
+</div>
 </body>
 
 </html>
