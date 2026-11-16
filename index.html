@@ -140,6 +140,32 @@
             font-size: 1rem;
         }
 
+        code {
+            background: rgba(51, 65, 85, 0.6);
+            padding: 0.15rem 0.4rem;
+            border-radius: 4px;
+            font-size: 0.88em;
+            color: #93c5fd;
+            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+        }
+
+        .link-desc p {
+            margin-bottom: 0.6rem;
+        }
+
+        .link-desc p:last-child {
+            margin-bottom: 0;
+        }
+
+        .link-desc ul {
+            margin: 0.35rem 0 0.6rem 1.25rem;
+            list-style-type: disc;
+        }
+
+        .link-desc li {
+            margin-bottom: 0.3rem;
+        }
+
         @media (max-width: 768px) {
             body {
                 padding: 1rem;
@@ -218,6 +244,26 @@
                 shade is estimated from the sun's position and the buildings around each patio, with
                 live weather and cloud cover on top. Covers Chicago, New York City, Philadelphia, and
                 Washington, DC. Get it on the App Store: <a href="https://apps.apple.com/app/id6831315619" target="_blank" rel="noopener noreferrer">https://apps.apple.com/app/id6831315619</a>
+            </div>
+        </div>
+
+        <div class="link-item" style="cursor: default;">
+            <div class="link-title">Credit Card Churning MCP Server</div>
+            <div class="link-url">
+                <a href="https://github.com/kumprj/churning-mcp" target="_blank"
+                   rel="noopener noreferrer">https://github.com/kumprj/churning-mcp</a>
+            </div>
+            <div class="link-desc">
+                <p>A local-first Model Context Protocol (MCP) server that empowers AI assistants like Claude to act as a personal credit card churning and points optimization copilot. It enables conversational analysis of card portfolios, application velocity rules, spending trajectories, and community intelligence without cloud costs or exposing private financial data.</p>
+                <p><strong>Architecture &amp; Tech Stack:</strong> Built in Python using the official MCP SDK (v2) with strict read-only database connections for safety. Data is persisted in PostgreSQL with <code>pgvector</code> in Docker, semantic embeddings are processed locally on an NVIDIA GPU using Ollama (<code>nomic-embed-text</code>, 768-dim) with optional CPU cross-encoder reranking (<code>ms-marco-MiniLM-L6-v2</code>), and an ingestion pipeline pulls historical archives and nightly updates from Project Arctic Shift (Reddit) and churning blog RSS feeds.</p>
+                <p><strong>Key MCP Tools Provided:</strong></p>
+                <ul>
+                    <li><code>check_chase_5_24</code> &amp; <code>get_portfolio</code>: Computes 24-month card velocity, individual drop-off dates, and predicts when you'll be eligible under Chase 5/24 again.</li>
+                    <li><code>calculate_spend_trajectory</code>: Projects daily and weekly spending velocity required to comfortably hit Minimum Spend Requirements (MSR) before bonus deadlines.</li>
+                    <li><code>get_next_card_recommendation</code> &amp; <code>search_card_offers</code>: Ranks sign-up bonus offers by estimated first-year net value while checking eligibility blockers like 5/24, Amex lifetime rules, and existing cards.</li>
+                    <li><code>evaluate_point_valuation</code> &amp; <code>check_card_credits</code>: Values point balances across airline/hotel transfer partners and tracks reset dates for recurring card statement credits.</li>
+                    <li><code>search_data_points</code> &amp; <code>compare_data_point_evidence</code>: Hybrid semantic and full-text search with freshness decay across crowdsourced Reddit and blog data points to verify recent issuer approval rules and retention offers.</li>
+                </ul>
             </div>
         </div>
 
