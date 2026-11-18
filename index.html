@@ -250,11 +250,12 @@
         <div class="link-item" style="cursor: default;">
             <div class="link-title">Credit Card Churning MCP Server</div>
             <div class="link-url">
-                <a href="https://github.com/kumprj/churning-mcp" target="_blank"
-                   rel="noopener noreferrer">https://github.com/kumprj/churning-mcp</a>
+                <a href="https://github.com/kumprj/public-mcp-churning-server" target="_blank"
+                   rel="noopener noreferrer">https://github.com/kumprj/public-mcp-churning-server</a>
             </div>
             <div class="link-desc">
                 <p>A local-first Model Context Protocol (MCP) server that empowers AI assistants like Claude to act as a personal credit card churning and points optimization copilot. It enables conversational analysis of card portfolios, application velocity rules, spending trajectories, and community intelligence without cloud costs or exposing private financial data.</p>
+                <p><strong>Two repos, one system:</strong> The project is split in two. The research backend, <code>churning-mcp</code> (private), holds the database schema, ingestion pipeline, embedding service, and the research and planning tools. The <a href="https://github.com/kumprj/public-mcp-churning-server" target="_blank" rel="noopener noreferrer">public server</a> linked above is a thin HTTP adapter in front of it that anyone can read to see how access works. Each user gets a private URL (<code>https://&lt;host&gt;/&lt;secret&gt;/mcp</code>) to paste into an AI app such as Claude, Gemini, ChatGPT, or Perplexity, with nothing to install. The server binds to localhost and is exposed through Tailscale Funnel, and the owner is set from the URL, so no tool takes an owner parameter. Only an explicit allowlist of tools is public, and personal transaction and planning tools stay off it. Users save their cards and point balances in plain language, and answers then account for what they already hold. Access is invite-only during beta.</p>
                 <p><strong>Architecture &amp; Tech Stack:</strong> Built in Python using the official MCP SDK (v2) with strict read-only database connections for safety. Data is persisted in PostgreSQL with <code>pgvector</code> in Docker, semantic embeddings are processed locally on an NVIDIA GPU using Ollama (<code>nomic-embed-text</code>, 768-dim) with optional CPU cross-encoder reranking (<code>ms-marco-MiniLM-L6-v2</code>), and an ingestion pipeline pulls historical archives and nightly updates from Project Arctic Shift (Reddit) and churning blog RSS feeds.</p>
                 <p><strong>Key MCP Tools Provided:</strong></p>
                 <ul>
