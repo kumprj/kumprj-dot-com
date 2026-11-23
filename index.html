@@ -303,11 +303,17 @@
         <div class="link-item" style="cursor: default;">
             <div class="link-title">Fair Priced Tickets</div>
             <div class="link-url">
-                <a href="http://fairpricedtickets.com/" target="_blank"
-                   rel="noopener noreferrer">http://fairpricedtickets.com/</a>
+                <a href="http://fair-price-tickets-showcase.s3-website-us-east-1.amazonaws.com/" target="_blank"
+                   rel="noopener noreferrer">http://fair-price-tickets-showcase.s3-website-us-east-1.amazonaws.com/</a>
             </div>
-            <div class="link-desc">Ticket resale website POC that doesn't allow price gouging.
-                Receipts of tickets are parsed to prevent overcharging.
+            <div class="link-desc">Ticket resale marketplace POC that doesn't allow price gouging.
+                <p><strong>The key idea:</strong> sellers must upload the original purchase receipt
+                    with every listing. Ticket PDFs and receipt images are parsed (PDF text extraction,
+                    with OCR for images) to detect what was actually paid, and the listing price is checked
+                    against it, so tickets can't be marked up.</p>
+                <p>Built with Next.js, DynamoDB, Stripe Checkout, Google sign-in, S3, and Twilio phone
+                    verification. The project is retired; the link is a static showcase with sample data
+                    (no real accounts or payments).</p>
             </div>
         </div>
 
